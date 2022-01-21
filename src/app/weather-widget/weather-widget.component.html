@@ -1,0 +1,62 @@
+
+<!-- <div class="row d-flex justify-content-center">
+
+<div class="row gx-3" >
+<div class="col-sm-2" *ngFor="let weather of weatherData">
+    <div class="container px-1">
+        <div id="divWeatherWidget" class=" p-4">
+            <div class="weatherWidgetRow" style="font-size:32px;margin-top:5px">Gothenburg</div>
+            <img src="assets/weathericon/png/cloudy.png"style="width:85px">
+            <div class="weatherWidgetRow" style="font-size:32px;margin-top:5px">{{weather.data.instant.details.air_temperature}}°</div>
+            <div class="weatherWidgetRow"style="font-size:12px">Feels like : {{weather.data.instant.details.air_temperature}}° </div>
+            <div class="weatherWidgetRow"style="font-size:12px">Humidity : {{weather.data.instant.details.relative_humidity}}%</div>
+        </div>
+    </div>
+</div>
+    
+</div>
+<div class="divider py-1 bg-dark"></div> -->
+
+<!-- <div class="container">
+    <div class="current-info">
+        <div class="date-container">
+            <div class="time" id="time">
+                12:30 <span id="am-pm">PM</span>
+            </div>
+            <div class="date" id="date">
+                Monday, 25 May
+            </div>
+
+            <div class="others" id="current-weather-items">
+                
+                
+            </div>
+        </div>
+
+        <div class="place-container">
+            <div class="time-zone" id="time-zone">Asia/Kolkata</div>
+            <div id="country" class="country">IN</div>
+        </div>
+    </div>
+
+    
+</div> -->
+
+<div class="future-forecast">
+
+    <div class="weather-forecast" id="weather-forecast">
+        <div class="weather-forecast-item" *ngFor="let weather of weatherData;let i =index">
+            <div class="day">{{days[i]}}</div>
+            <img src="assets/weathericon/png/fog.png" alt="weather icon" class="w-icon">
+            <div *ngIf="(weather.time | date: 'EEEE') == days[i]">
+            <div class="temp">Time - {{weather.time | date: 'EEEE h:mm'}}</div>
+            <div class="temp">Night - {{weather.data.instant.details.air_temperature}}&#176; C</div>
+            <div class="temp">Humidity : {{weather.data.instant.details.relative_humidity}}%</div>
+        </div>
+
+        </div>
+
+    </div>
+</div>
+
+

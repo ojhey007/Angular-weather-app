@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border: 1px;
+    border-radius: 20px;
+    background-color:#66B3A6 ;
+}
+
+body {
+    font-family: 'Roboto';
+  }

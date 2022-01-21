@@ -1,0 +1,126 @@
+
+
+.upperSection {
+    height: 300px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+h2{
+    
+    color: #A3A3A3;
+
+}
+}
+
+.col-lg-12 .temp:last-child, .col-lg-12 .temp:nth-child(5){
+    color: #A3A3A3;
+    font-size: 12px;
+}
+.lowerSection {
+    height: 500px;  
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.upperSection .row .col-lg-12{
+display: block;
+margin: auto 0;
+align-items: center;
+}
+
+
+hr {
+	border: 0;
+	border-top: 1px solid #66B3A6;
+}
+.weatherIcon{
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes cloudMovement{
+    from{margin-left: -55px;}
+    to{margin-left: 65px;}
+}
+
+@media (min-width: 768px){
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1  {
+      width: 100%;
+      *width: 100%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+      width: 14.285714285714285714285714285714%;
+      *width: 14.285714285714285714285714285714%;
+    }
+  }
+
+
+
+//  ===================================>>>>>>>>>>>>>>>>>
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.current-info .others{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27, 0.6);
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+}
+
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.future-forecast{
+    background: rgba(24,24,27,0.8);
+    padding: 25px;
+    position: fixed;
+    bottom: 20;
+    display: flex;
+    color:white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border:  solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    // background: rgba(24,24,27, 0.6);
+}
+.weather-forecast-item .day{
+    padding-bottom: 25px;
+}
+
+.weather-forecast-item img{
+    padding-bottom: 25px;
+}
+.weather-forecast-item .temp{
+    padding-bottom: 25px;
+}
+
