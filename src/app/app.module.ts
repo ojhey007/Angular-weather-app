@@ -7,6 +7,7 @@ import { WeatherWidgetComponent } from './weather-widget/weather-widget.componen
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { CarouselComponent } from './widget/carousel/carousel.component';
 import { RootContainerComponent } from './component/root-container/root-container.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { RootContainerComponent } from './component/root-container/root-containe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

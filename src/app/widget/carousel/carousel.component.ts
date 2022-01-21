@@ -29,7 +29,24 @@ getCurrentWeather(){
   }
 setWeatherData(data){
 this.weatherData = data.timeseries.slice(0,7);
+// this.sortDays(data.timeseries);
 this.getCurrentWeather();
+}
+
+sortDays(timeseries){
+
+  // var groups = _.groupBy(occurences, function (date) {
+  //   return moment(date).startOf('day').format();
+  // });
+//   var sorter = function(a, b) {
+//     var d1 = new Date(a[0]).getDay();
+//     var d2 = new Date(b[0]).getDay();
+//     return d1 - d2;
+// };
+console.log(timeseries);
+// for(let i = 0;i<=timeseries.length;i++){
+//   console.log(timeseries.sort(sorter));
+// }
 }
 
 
