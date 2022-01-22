@@ -1,39 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~bootstrap/dist/css/bootstrap.css";
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
 .carousel-dark .carousel-indicators [data-bs-target] {
     width: 10px;
     height: 10px;
     border: 1px;
     border-radius: 20px;
-    background-color:#66B3A6 ;
+    background-color: #66B3A6;
 }
-@media (max-width:834px) {
-    .dsktp{
+
+@media only screen and (max-width:1440px) {
+    .medium-mobile {
         display: none;
     }
-}
-@media (min-width:834px) {
-    .mobileCarousel{
+    .dsktp {
+        display: block;
+    }
+    .xxDevices {
         display: none;
     }
 }
 
-// once the pixel is less than 375px
-@media (max-width:374px) {
-    .upperSection{
-        margin-top: 200px;
-        height: 700px;
-    }.row.horizontal-rule{
+@media only screen and (max-width:834px) {
+    .dsktp {
         display: none;
     }
-    .dsktp , .mobileCarousel{
+    .xxDevices {
         display: none;
+    }
+    .medium-mobile {
+        display: block;
     }
 }
+
+
+/* if the browser window is 374px or smaller*/
+
+@media only screen and (max-width:375px) {
+    .upperSection {
+        margin-top: 150px;
+        height: 600px;
+    }
+    .row.horizontal-rule {
+        display: none;
+    }
+    .dsktp,
+    .medium-mobile {
+        display: none;
+    }
+    .xxDevices {
+        display: block;
+    }
+}
+
+.carousel-dot.carousel-dot-active {
+    background-color: #66B3A6 !important;
+    border: 2px solid #66B3A6 !important;
+}
+
+.carousel-dot {
+    background-color: #C4C4C4;
+    border: 2px solid #C4C4C4 !important;
+}
+
 body {
     font-family: 'Roboto';
-  }
+}

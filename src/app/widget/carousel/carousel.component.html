@@ -1,26 +1,58 @@
-
-
-  <div class="container-fluid">
-      <div class="upperSection">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>{{currentCity}}</h2>
-                <img class="weatherIcon" src="assets/weathericon/png/{{currentData.data.next_1_hours.summary.symbol_code}}.png" style="width: 60px;">
-                <div class="temp">{{currentData.data.instant.details.air_temperature}}&#176; C</div>
-                <div class="temp">{{currentData.data.instant.details.wind_speed}}m/s</div>
-                <div class="temp">{{currentData.time | date: 'EEEE h:mm a'}}</div>
-                <div class="temp">{{currentData.data.next_1_hours.summary.symbol_code| titlecase}}</div>
+<div class="xxDevices">
+    <carousel dots="true" [arrows]="false" cellsToShow="1" [height]="700">
+        <div class="carousel-cell">
+            <div class="upperSection">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>{{currentCity}}</h2>
+                        <img class="weatherIcon" src="assets/weathericon/png/{{currentData.data.next_1_hours.summary.symbol_code}}.png" style="width: 60px;">
+                        <div class="temp">{{currentData.data.instant.details.air_temperature}}&#176; C</div>
+                        <div class="temp">{{currentData.data.instant.details.wind_speed}}m/s</div>
+                        <div class="temp">{{currentData.time | date: 'EEEE h:mm a'}}</div>
+                        <div class="temp">{{currentData.data.next_1_hours.summary.symbol_code| titlecase}}</div>
+                    </div>
+                </div>
             </div>
-
-      </div>
-      </div>
-    
-    <div class="row horizontal-rule">
-        <div class="col-12">
-            <hr/>
         </div>
-    </div>
+        <div class="carousel-cell">
+            <div class="row xxmobile" *ngFor="let weather of weatherData;let i =index">
+                <div class="col">
+                    {{days[i]}}
+                </div>
+                <div class="col">
+                    <img src="assets/weathericon/png/{{weather.data.next_1_hours.summary.symbol_code}}.png" style="width:50px; top:-17px;">
+                </div>
+                <div class="col">
+                    {{weather.data.instant.details.air_temperature}}&#176; C
+                </div>
+                <div class="col">
+                    {{weather.data.instant.details.wind_speed}}m/s
+                </div>
+            </div>
+        </div>
+    </carousel>
+</div>
+
+<div class="container-fluid">
     <div class="dsktp">
+        <div class="upperSection">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>{{currentCity}}</h2>
+                    <img class="weatherIcon" src="assets/weathericon/png/{{currentData.data.next_1_hours.summary.symbol_code}}.png" style="width: 60px;">
+                    <div class="temp">{{currentData.data.instant.details.air_temperature}}&#176; C</div>
+                    <div class="temp">{{currentData.data.instant.details.wind_speed}}m/s</div>
+                    <div class="temp">{{currentData.time | date: 'EEEE h:mm a'}}</div>
+                    <div class="temp">{{currentData.data.next_1_hours.summary.symbol_code| titlecase}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row horizontal-rule">
+            <div class="col-12">
+                <hr/>
+            </div>
+        </div>
         <div class="row">
             <div class="container">
                 <div class="row seven-cols">
@@ -39,7 +71,27 @@
             </div>
         </div>
     </div>
-    <div class="mobileCarousel">
+
+
+    <div class="medium-mobile">
+        <div class="upperSection">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>{{currentCity}}</h2>
+                    <img class="weatherIcon" src="assets/weathericon/png/{{currentData.data.next_1_hours.summary.symbol_code}}.png" style="width: 60px;">
+                    <div class="temp">{{currentData.data.instant.details.air_temperature}}&#176; C</div>
+                    <div class="temp">{{currentData.data.instant.details.wind_speed}}m/s</div>
+                    <div class="temp">{{currentData.time | date: 'EEEE h:mm a'}}</div>
+                    <div class="temp">{{currentData.data.next_1_hours.summary.symbol_code| titlecase}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row horizontal-rule">
+            <div class="col-12">
+                <hr/>
+            </div>
+        </div>
         <carousel dots="true" arrowsTheme="dark" [cellsToShow]="3" cellsToScroll="3" [height]="300">
             <div class="carousel-cell" *ngFor="let weather of weatherData;let i =index">
                 <div class="weather-forecast-item">
@@ -47,10 +99,8 @@
                     <img src="assets/weathericon/png/{{weather.data.next_1_hours.summary.symbol_code}}.png" style="width: 60px;">
                     <div class="temp">{{weather.data.instant.details.air_temperature}}&#176; C</div>
                     <div class="temp">{{weather.data.instant.details.wind_speed}}m/s</div>
-                  
+
                 </div>
             </div>
         </carousel>
     </div>
-        
-      
